@@ -46,6 +46,9 @@
         </script>
         <div id="b2">
             <h1 id="signup_heading">Sign Up</h1>
+            <div class="circles">
+                <i class="material-icons" id="circle1">circle</i><i class="material-icons" id="circle2">circle</i>
+            </div>
             <form id="signup_form1" action="" method="get">
                 <span class="formspan">Email Id : </span><input type="email" name="email" id="email"
                     placeholder="Enter e-mail id"><br>
@@ -54,9 +57,46 @@
                 <span class="formspan">Last Name : </span><input type="text" name="lname" id="lname"
                     placeholder="Enter last name"><br>
             </form>
-            <button id="arrow">
+            <button id="rarrow">
                 <i class="material-icons" id="right_arrow">keyboard_arrow_right</i>
             </button>
+            <form id="signup_form2" action="" method="get" style="display:none">
+                <span class="formspan">Username : </span><input type="text" name="username" id="username"
+                    placeholder="Enter username"><br>
+                <span class="formspan">Password : </span><input type="password" name="password" id="password"
+                    placeholder="Enter password"><br>
+                <span class="formspan">Confirm password : </span><input type="password" name="cpassword" id="cpassword"
+                    placeholder="Re-enter password"><br>
+            </form>
+            <button type="submit" value="Submit" id="submit_button" style="display:none">Submit</button>  
+            <button id="larrow" style="display:none">
+                <i class="material-icons" id="left_arrow">keyboard_arrow_left</i>
+            </button>
+            <script>
+                document.getElementById("rarrow").addEventListener("click", nextFunc);
+
+                function nextFunc(){
+                    document.getElementById("signup_form1").style.display = "none";
+                    document.getElementById("signup_form2").style.display = "grid";
+                    document.getElementById("circle1").style.color = "#5e606b84";
+                    document.getElementById("circle2").style.color = "#38385c";
+                    document.getElementById("rarrow").style.display = "none";
+                    document.getElementById("submit_button").style.display = "initial";
+                    document.getElementById("larrow").style.display = "initial";
+                }
+
+                document.getElementById("larrow").addEventListener("click", backFunc);
+
+                function backFunc(){
+                    document.getElementById("signup_form2").style.display = "none";
+                    document.getElementById("signup_form1").style.display = "grid";
+                    document.getElementById("circle2").style.color = "#5e606b84";
+                    document.getElementById("circle1").style.color = "#38385c";
+                    document.getElementById("larrow").style.display = "none";
+                    document.getElementById("submit_button").style.display = "none";
+                    document.getElementById("rarrow").style.display = "initial";
+                }
+            </script>
             <span class="loginfooter" id="login_footer_id">Already have an account? <a href="login.html"
                     id="clicktologin" class="loginfoooter" target="_blank">Login</a></span>
         </div>

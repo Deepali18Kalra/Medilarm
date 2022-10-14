@@ -27,7 +27,7 @@ body{
     box-shadow: 20px 20px 25px 25px rgba(0, 0, 0, 0.219);
 }
 #b1{
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     width: 116%;
     height: 100%;
@@ -48,21 +48,43 @@ body{
 #b2{
     width: 116%;
     height: 100%;
-    display:flex;
+    display:inline-flex;
     flex-direction: column;
     background-color: white;
 }
 #signup_heading{
-    height:20%;
+    height:fit-content;
     width:100%;
-    margin:5% 10% 10% 0%;
+    margin-top:5%;
+    margin-bottom: 2%;
     color: #1f4476;
     font-family: 'League Spartan';
     letter-spacing: -1px;
     text-align:center;
     font-size: 226%;
 }
-#signup_form1{
+.circles{
+    display: inline-flex;
+    flex-direction: row;
+    width: fit-content;
+    height: fit-content;
+    align-self: center;
+    gap: 12%;
+}
+#circle1 , #circle2{
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+    font-size:120%;
+    padding: 1%;
+}
+#circle1{
+    color: #38385c;
+}
+#circle2{
+    color: #5e606b84;
+}
+#signup_form1 , #signup_form2{
     display: grid;
     position: absolute;
     width:46%;
@@ -92,7 +114,7 @@ input{
     grid-column-end: 2;
     margin:4%;
 }
-#arrow{
+#rarrow{
     display: grid;
     position: absolute;
     top:60%;
@@ -103,10 +125,37 @@ input{
     background-color:white;
     border:4px solid rgba(0, 0, 0, 0.658);
 }
-#right_arrow{
+
+#larrow{
+    display: grid;
+    position: relative;
+    top:40%;
+    left:10%;
+    width:8%;
+    height: 8%;
+    border-radius: 50%;
+    background-color:white;
+    border:4px solid rgba(0, 0, 0, 0.658);
+}
+
+#right_arrow , #left_arrow{
     color:rgba(0, 0, 0, 0.658);
     font-size: 312%;
     justify-self: baseline;
+}
+#submit_button{
+    width:18%;
+    height: 6%;
+    padding:1px;
+    position:relative;
+    align-self: center;
+    top:47%;
+    color:#1f4476;
+    background-color:#f8b697;
+    border-radius: 40px;
+    border:#f8b697;
+    font-family: 'Josefin Sans';
+    font-size: large;
 }
 .loginfooter{
     font-family: 'Josefin Sans';
