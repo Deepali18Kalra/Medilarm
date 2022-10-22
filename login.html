@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style_login.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="centerbox">
+        <div id="b1">
+            <ul style="list-style:none; margin: 0px; padding: 0px;">
+                <li style="width: fit-content; height: fit-content;">
+                    <img class="image" src="./media/login_illustration-01.svg">
+                </li>
+            </ul>
+            <span id="quote">Most pills should also always be taken with water to help them dissolve properly in your
+                system. Do not take pills with alcohol as this can be especially harmful.</span>
+        </div>
+        <div id="b2">
+            <h1 id="login_heading">Login</h1>
+            <form id="login_form" action="" method="get">
+                <span class="formspan">Enter Email Id : </span><input class="forminput" type="email" name="email" id="email"
+                    placeholder="Enter e-mail id"><br>
+                <span class="formspan">Enter Password : </span><input class="forminput" type="password" id="password" name="password" required
+                    placeholder="Enter password"><br>
+            </form>
+            <div class="remember">
+                <label for="remember_checkbox">
+                    <input type="checkbox" id="remember_checkbox" checked="checked">Remember me
+                </label> 
+            </div> 
+            <button type="submit" value="Submit" id="login_button">Login</button>
+            <span class="signupfooter">Don't have an account? <a href="signup.html"
+                id="clicktosignup" class="signupfoooter" target="_blank">Sign Up</a></span>
+        </div>
+    </div>
+    <script>
+        let titles = ['Feeling well does not mean your medical condition is cured.' +
+            ' Conditions like high blood pressure, high cholesterol and diabetes can damage your body,' +
+            ' even if you do not have symptoms and feel fine.',
+            ' Do not stop or take less of your medicine without talking to your doctor first.',
+        'It is sometimes dangerous to mix prescription medicine with over-the-counter medicines,' +
+        ' herbal medicines and supplements. Tell your doctor or pharmacist about everything you are taking.',
+        'Antibiotics are only helpful in illnesses caused by bacteria, such as Strep throat.' +
+        ' If you do have a virus-based illness you might be prescribed a different medicine other than an antibacterial treatment.',
+        'Unless you’re told otherwise, you should always store medications in a dry area,' +
+        ' away from heat and direct light — which generally means putting them away and out of sig​ht.'];
+        let currentIndex = 0;
+        let span = document.getElementById('quote');
+
+        setInterval(() => {
+            span.innerHTML = titles[currentIndex];
+            currentIndex++;
+
+            if (currentIndex === 5)
+                currentIndex = 0;
+        }, 7000)
+    </script>
+</body>
+
+</html>
