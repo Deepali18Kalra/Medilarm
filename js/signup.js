@@ -71,6 +71,26 @@ const submitter = async () => {
   });
   if (response.status === 200) {
     console.log(await response.json());
-    window.location = "index.html";
+    toastr.options = {
+      closeButton: true,
+      debug: false,
+      newestOnTop: false,
+      progressBar: true,
+      positionClass: "toast-bottom-right",
+      preventDuplicates: false,
+      onclick: null,
+      showDuration: "200",
+      hideDuration: "1000",
+      timeOut: "3000",
+      extendedTimeOut: "1000",
+      showEasing: "swing",
+      hideEasing: "linear",
+      showMethod: "fadeIn",
+      hideMethod: "fadeOut",
+    };
+    toastr.options.onHidden = function () {
+      window.location = "index.html";
+    };
+    toastr["success"]("Successfully Registered");
   }
 };

@@ -6,15 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style_signup.css">
-   
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Sign  Up</title>
 </head>
 
 <body>
     <div class="centerbox">
-        <div id="b1">
-            <ul style="list-style:none; margin: 0px; padding: 0px;">
+        <div id="b1" >
+            <ul style="list-style:none; margin: 0px; padding: 0px;height: 32%;">
                 <li style="width: fit-content; height: fit-content;">
                     <img class="image" src="./media/login_illustration-01.svg">
                 </li>
@@ -41,20 +43,22 @@
             <form id="signup_form2" style="display:none">
                 <span class="formspan">Phone No : </span><input type="text" name="username" id="username"
                     placeholder="Enter Phone No"><br>
-                <span class="formspan">Password : </span><input type="password" name="password" id="password"
+                    <span class="formspan">Password : </span><input type="password" name="password" id="password"
                     placeholder="Enter password"><br>
                 <span class="formspan">Confirm password : </span><input type="password" name="cpassword" id="cpassword"
                     placeholder="Re-enter password"><br>
                 </form>
                 <button type="submit" value="Submit" onclick="submitter()" id="submit_button" style="display:none">Submit</button>  
-            <button id="larrow" style="display:none">
+                <button id="larrow" style="display:none">
                 <i class="material-icons" id="left_arrow">keyboard_arrow_left</i>
             </button>
             <span class="loginfooter" id="login_footer_id">Already have an account? <a href="login.html"
                 id="clicktologin" class="loginfoooter" target="_blank">Login</a></span>
-                <script src="./js/signup.js"></script>
+            </div>
         </div>
-    </div>
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="./js/signup.js"></script>
 </body>
 
 </html>
