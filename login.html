@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style_login.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <title>Login</title>
 </head>
 
@@ -24,14 +26,14 @@
         <div id="b2">
             <h1 id="login_heading">Login</h1>
             <form  id="login_form">
-                <span class="formspan">Enter Email Id : </span><input class="forminput" type="email" name="email" id="email"
+                <span class="formspan">Enter Email Id : </span><input onblur="evalidate()" class="forminput" type="email" name="email" id="email"
                     placeholder="Enter e-mail id"><br>
-                <span class="formspan">Enter Password : </span><input class="forminput" type="password" id="password" name="password" required
+                <span class="formspan">Enter Password : </span><input  onkeyup="submitter()" class="forminput" type="password" id="password" name="password" required
                     placeholder="Enter password"><br>
             </form>
-            <div class="remember">
+            <div class="remember"style="display:none!important;" >
                 <label for="remember_checkbox">
-                    <input type="checkbox" id="remember_checkbox" checked="checked">Remember me
+                    <input type="checkbox"  id="remember_checkbox" checked="checked">Remember me
                 </label> 
             </div> 
             <button type="submit" value="Submit" onclick="submitter()" id="login_button">Login</button>
@@ -39,7 +41,10 @@
                 id="clicktosignup" class="signupfoooter" target="_blank">Sign Up</a></span>
         </div>
     </div>
-   <script src="./js/login.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/util.js"></script>
+   <script  src="./js/login.js"></script>
 </body>
 
 </html>

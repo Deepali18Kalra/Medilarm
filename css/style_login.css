@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Josefin+Sans:wght@500&family=League+Spartan:wght@600;700&family=Montserrat:wght@500&family=Poppins:wght@500&family=Prompt:wght@300;600&display=swap');
-*{
+html{
     width:100%;
     height:100%;
     box-sizing: border-box;
@@ -78,7 +78,7 @@ body{
     color: #38385c;
     font-family: 'Josefin Sans';
     text-align: center;
-    margin-top: 42%;
+    margin-top: 75%;
     padding-left: 8%;
     padding-right: 8%;
 }

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style_dreminder.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+        <title>Monthly Reminder</title>
+        <style>
+            li{
+                cursor: pointer;
+            }
+            </style>
+</head>
+<body>
+    <nav class="sidebar">
+        <li class="Head">Medilarm</li>
+        <li class="menu" id="notactive"><i class="material-icons">person</i><span>Profile</span></li>
+        <li class="menu" id="active"><i class="material-icons">medication</i><span>Daily Medicine</span></li>
+        <li class="menu" id="notactive"><i class="material-icons">medical_services</i><span>Monthly Purchase</span></li>
+        <li onclick="logout()" class="menu" id="notactive"><i class="material-icons">history</i><span>Logout</span></li>
+    </nav>
+    <div class="content">
+        <p class="thisweek"></p>
+        <button class="add" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addremindermodal">
+            <i class="material-icons" style="color:#1c689b; font-size:80px;">add_box</i>
+        </button>
+        <div class="notifbox" id="notifbox">
+       
+        </div>
+    </div>
+    <button type="button" class="add" >   
+    </button>
+    
+    <div class="modal fade" id="addremindermodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Add Daily Reminder</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Name of medicine</label>
+                    <input type="text" class="form-control" id="medicinename" placeholder="ABC 100mg">
+                  </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Time of medicine</label>
+                    <input type="time" class="form-control" id="medicinetime" placeholder="10:30PM">
+                  </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Quantity</label>
+                    <input type="number" class="form-control" id="medicineqty" placeholder="1">
+                  </div>
+                <div class="mb-3">
+                    <div class="form-floating">
+                        <select class="form-select" id="medicineunit" aria-label="Floating label select example">
+                          <option value="tablet" selected>tablet</option>
+                          <option value="ml">ml</option>
+                          <option value="tbsp">tbsp</option>
+                        </select>
+                        <label for="floatingSelect">Select the unit of dosage</label>
+                      </div>
+                  </div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    <button type="button" class="btn btn-primary" onclick="addReminder()">Submit</button>
+                </div>
+          </div>
+        </div>
+      </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<script src="./js/dreminder.js"></script>
+<script src="./js/util.js"></script>
+<script>
+    const test = (e)=>{
+        e.preventDefault();
+        console.log("kfkfjwnfkfjn")
+    }
+   
+</script>
+</body>
+</html>

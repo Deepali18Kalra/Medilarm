@@ -57,7 +57,7 @@ const submitter = async () => {
     phoneNo: phoneno,
     password: password,
   };
-  url = "http://localhost:3001/user/register";
+  url = "https://medilarm.herokuapp.com/user/register";
 
   const response = await fetch(url, {
     method: "POST",
