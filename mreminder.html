@@ -19,10 +19,10 @@
 <body>
     <nav class="sidebar">
         <li class="Head">Medilarm</li>
-        <li class="menu"  id="notactive"><i class="material-icons">person</i><span>Profile</span></li>
-        <li class="menu" onclick="()=>{window.location='mreminder.html'}" id="active"><i class="material-icons">medication</i><span>Daily Medicine</span></li>
-        <li class="menu" onclick="()=>{window.location='dreminder.html'}" id="notactive"><i class="material-icons">medical_services</i><span>Monthly Purchase</span></li>
-        <li onclick="logout()" class="menu" id="notactive"><i class="material-icons">history</i><span>Logout</span></li>
+        <li class="menu" id="notactive"><a style="color:white;text-decoration:none" href=""><i class="material-icons">home</i><span>Home</span></a></li>
+        <li class="menu" id="active"><a style="color:white;text-decoration:none" href="dreminder.html"><i class="material-icons">medication</i><span>Daily Medicine</span></a></li>
+        <li class="menu" id="notactive"><a style="color:white;text-decoration:none" href="mreminder.html"><i class="material-icons">medical_services</i><span>Monthly Purchase</span></a></li>
+        <li onclick="logout()" class="menu" id="notactive"><i class="material-icons">logout</i><span>Logout</span></a></li>
     </nav>
     <div class="content">
         <p class="thisweek"></p>
@@ -40,7 +40,7 @@
         <div class="modal-dialog">
           <div class="modal-content">
               <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Add Daily Reminder</h1>
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Add Monthly Reminder</h1>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
             <div class="modal-body">
